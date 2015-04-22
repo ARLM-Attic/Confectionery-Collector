@@ -14,6 +14,7 @@
 			}
 
 			self.makeItem = function(amount){
+				chai.assert.isNumber(amount, 'string')
 				count += amount * efficiency;
 			}
 

@@ -1,15 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png">
+
+    <title>Candy Empirical</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/angular-chart.css" rel="stylesheet" >
+    <link href="css/dashboard.css" rel="stylesheet">
+
   <style>
     [ng-cloak] {
       display: none;
     }
   </style>
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="javascript/vendor/chart.js"></script>
+  <script src="javascript/vendor/chai.js"></script>
   <script>
     // include angular loader, which allows the files to load in any order
     //@@NG_LOADER_START@@
@@ -31,28 +45,60 @@
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'app.js',
-      'view1/view1.js',
-      'view2/view2.js',
-      'components/version/version.js',
-      'components/version/version-directive.js',
-      'components/version/interpolate-filter.js'
+      'javascript/candyPeople.js',
+      'javascript/vendor/angular-chart.js',
+      'javascript/market/market.js',
+      'javascript/candyPeople.js',
+      'javascript/industry.js',
+      'javascript/stats.js'
+      // 'app.js',
     ], function() {
       // when all is done, execute bootstrap angular application
-      angular.bootstrap(document, ['myApp']);
+      angular.bootstrap(document, ['marcApp']);
+      var assert = chai.assert;
     });
   </script>
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="app.css">
 </head>
 <body ng-cloak>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Candy Empirical</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar" ng-controller="SideBar">
+          <ul class="nav nav-sidebar">
+            <li ng-class="{active: isActive('/')}"><a href="#">Overview</a></li>
+            <li ng-class="{active: isActive('/Prisoners')}"><a href="#Prisoners">Candy Makers</a></li>
+            <li ng-class="{active: isActive('/Industry')}"><a href="#Industry">Market</a></li>
+            <li ng-class="{active: isActive('/Achievements')}"><a href="#Achievements">Achievements</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div ng-view></div>
+          
+        </div>
+      </div>
+    </div>
 </body>
 </html>
