@@ -1,0 +1,35 @@
+<h1 class="page-header">Production Overview</h1>
+<div class="row"> 
+  <div class="col-md-2 col-sm-2"> 
+      <div> Taffy: {{items.taffy.getCount()| number : 0}} </div> 
+  </div>
+
+  <div class="col-md-2 col-sm-2"> 
+      <div> JellyBeans: {{items.jellyBean.getCount()| number : 0}} </div> 
+  </div>
+
+  <div class="col-md-2 col-sm-2"> 
+      <div> DoughNuts: {{items.doughNut.getCount()| number : 0}} </div> 
+  </div>
+
+  <div class="col-md-2 col-sm-2"> 
+      <div> JawBreakers: {{items.jawBreaker.getCount()| number : 0}} </div> 
+  </div>
+
+  <div class="col-md-2 col-sm-2"> 
+      <div> Peppermint: {{items.peppermint.getCount()| number : 0}} </div> 
+  </div>
+
+  <div class="col-md-2 col-sm-2"> 
+      <div> RockCandy: {{items.rockCandy.getCount()| number : 0}} </div> 
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5 col-sm-6"> 
+    <canvas id="radar" class="chart chart-radar" data="data" labels="labels"></canvas> 
+  </div> 
+  <div class="col-md-5 col-sm-6" ng-controller="StockController">
+    <canvas id="line" class="chart chart-line" data="data"
+    labels="labels" legend="true" series="series"></canvas>
+  </div>
+</div>

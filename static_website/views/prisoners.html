@@ -1,0 +1,103 @@
+<!-- Industry.html -->
+    <div class="jumbotron text-center" style="padding-top: 5px;">
+        <h1>Candy Makers</h1>
+        <div class="row" style="padding-top: 15px;"> 
+            <div class="col-md-2 col-xs-4"> 
+                <div> <div class="visible-xs visible-sm">Taffy:</div> <span class="visible-md visible-lg">Taffy:</span> {{items.taffy.getCount()| number : 0}} </div> 
+            </div>
+
+            <div class="col-md-2 col-xs-4"> 
+                <div> <div class="visible-xs visible-sm">JellyBeans:</div> <span class="visible-md visible-lg">JellyBeans:</span>  {{items.jellyBean.getCount()| number : 0}} </div> 
+            </div>
+
+            <div class="col-md-2 col-xs-4"> 
+                <div> <div class="visible-xs visible-sm">DoughNuts:</div> <span class="visible-md visible-lg">DoughNuts:</span>  {{items.doughNut.getCount()| number : 0}} </div> 
+            </div>
+
+            <div class="col-md-2 col-xs-4"> 
+                <div> <div class="visible-xs visible-sm">JawBreakers:</div> <span class="visible-md visible-lg">JawBreakers:</span>  {{items.jawBreaker.getCount()| number : 0}} </div> 
+            </div>
+
+            <div class="col-md-2 col-xs-4"> 
+                <div> <div class="visible-xs visible-sm">Peppermint:</div> <span class="visible-md visible-lg">Peppermint:</span>  {{items.peppermint.getCount()| number : 0}} </div> 
+            </div>
+
+            <div class="col-md-2 col-xs-4"> 
+                <div> <div class="visible-xs visible-sm">RockCandy:</div> <span class="visible-md visible-lg">RockCandy:</span>  {{items.rockCandy.getCount()| number : 0}} </div> 
+            </div>
+        </div>
+    </div>
+
+        <div ng-repeat="worker in candyPeople | orderBy: 'id'" class="col-md-2 col-sm-4 col-xs-4">
+            <div class="text-center">{{worker.industry.name}} Maker</div>    
+            <img ng-src="images/{{worker.imgName}}.png" src="images/taffy.png" class="img-thumbnail" style="width: 100%;"> 
+            <div class="progress" class="">
+              <div ng-class="{'progress-bar-warning': worker.getCostProgress() < 99, 'progress-bar-success': worker.getCostProgress() == 100}" class="progress-bar" role="progressbar" aria-valuenow="{{worker.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': worker.getCostProgress() + '%'}">
+                <span class="sr-only">{{worker.getCostProgress()}}% Complete (warning)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-cost" ng-click="worker.mkTaffyPerson()" style="width: 100%;">Cost: {{worker.getCost()| number: 0}}</button>
+            <div><span class="field">Population:</span> {{worker.getCount()| number}} </div>
+         </div>
+
+         <!-- <div class="col-md-2 col-sm-4 col-xs-4"> 
+            <div class="text-center">JellyBean Folk</div>  
+            <img src="images/jellybean.png" class="img-thumbnail" style="width: 100%;">   
+            <div class="progress" class="">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{jellyBean.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': jellyBean.getCostProgress() + '%'}">
+                <span class="sr-only">{{jellyBean.getCostProgress()}}% Complete (warning)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-cost" ng-click="jellyBean.mkTaffyPerson()" style="width: 100%;">Cost: {{jellyBean.getCost()| number: 0}}</button>
+            <div><span class="field">Population:</span> {{jellyBean.getCount()| number}} </div>
+         </div>
+
+         <div class="col-md-2 col-sm-4 col-xs-4"> 
+            <div class="text-center">DoughNut Gaurdians</div>
+            <img src="images/doughnut.png" class="img-thumbnail" style="width: 100%;">  
+            <div class="progress" class="">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{doughNut.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': doughNut.getCostProgress() + '%'}">
+                <span class="sr-only">{{doughNut.getCostProgress()}}% Complete (warning)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-cost" ng-click="doughNut.mkTaffyPerson()" style="width: 100%;">Cost: {{doughNut.getCost()| number: 0}}</button>
+            <div><span class="field">Population:</span> {{doughNut.getCount()| number}} </div>
+            <div></div>
+         </div>
+
+         <div class="col-md-2 col-sm-4 col-xs-4"> 
+            <div class="text-center">JawBreaker Soldier</div> 
+            <img src="images/jawbreaker.png" class="img-thumbnail" style="width: 100%;"> 
+            <div class="progress" class="">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{jawBreaker.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': jawBreaker.getCostProgress() + '%'}">
+                <span class="sr-only">{{jawBreaker.getCostProgress()}}% Complete (warning)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-cost" ng-click="jawBreaker.mkTaffyPerson()" style="width: 100%;">Cost: {{jawBreaker.getCost()| number: 0}}</button>
+            <div><span class="field">Population:</span> {{jawBreaker.getCount()| number}} </div>
+         </div>
+
+         <div class="col-md-2 col-sm-4 col-xs-4"> 
+            <div class="text-center">Peppermint Factotum</div>
+            <img src="images/missingno.png" class="img-thumbnail" style="width: 100%;">  
+            <div class="progress" class="">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{peppermint.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': peppermint.getCostProgress() + '%'}">
+                <span class="sr-only">{{peppermint.getCostProgress()}}% Complete (warning)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-cost" ng-click="peppermint.mkTaffyPerson()" style="width: 100%;">Cost: {{peppermint.getCost()| number: 0}}</button>
+            <div><span class="field">Population:</span> {{peppermint.getCount()| number}} </div>
+         </div>
+
+         <div class="col-md-2 col-sm-4 col-xs-4"> 
+            <div class="text-center">RockCandy Construct</div> 
+            <img src="images/missingno.png" class="img-thumbnail" style="width: 100%;"> 
+            <div class="progress" class="">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{rockPeople.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': rockPeople.getCostProgress() + '%'}">
+                <span class="sr-only">{{rockPeople.getCostProgress()}}% Complete (warning)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-cost" ng-click="rockPeople.mkTaffyPerson()" style="width: 100%;">Cost: {{rockPeople.getCost()| number: 0}}</button>
+            <div><span class="field">Population:</span> {{rockPeople.getCount()| number}} </div>
+         </div> -->
+     </div> 

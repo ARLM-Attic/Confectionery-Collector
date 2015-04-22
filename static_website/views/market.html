@@ -1,0 +1,48 @@
+<!-- Market.html -->
+<div  class="page-header"> 
+	<h1 >Sugar Market </h1>
+</div>
+<div class="base">
+	<h3> sugar: {{sugar.getCount() | number : 0}}mg</h3>
+	<div class="btn-group bottom" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default" ng-class="{active: isActive(1)}" ng-click="setMultiplier(1)">1x</button>
+	  <button type="button" class="btn btn-default" ng-class="{active: isActive(10)}" ng-click="setMultiplier(10)">10x</button>
+	  <button type="button" class="btn btn-default" ng-class="{active: isActive(100)}" ng-click="setMultiplier(100)">100x</button>
+	</div>
+</div>
+
+<div class="row tight"> 
+	<div class="col-md-6" ng-repeat="item in industry"> 
+		<div class="row mellow well well-sm">
+			<div class="col-md-3 col-sm-3 col-xs-3" class="thumbnail">
+				<img ng-src="{{'images/' + item.name + '-CANDY.png'}}" alt="..." class="img-circle img-responsive">
+			</div>
+			<div class="col-md-9 col-sm-9 col-xs-9"> 
+				<div class="row" style="padding-top: 0px" >
+					<div class ="col-md-7 col-sm-7 col-xs-7"> 
+						<h3 class="text-left">{{item.name}}</h3>
+						<!-- <h4 class="text-right bottom">1,000/s</h4> -->
+					</div>
+					<div class ="col-md-5 col-sm-5 col-xs-5"> 
+						<h3 class="text-right">{{item.getCount() | number : 0}}</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-9 col-sm-9 col-xs-9"> 
+				<div class="row tight">
+					<div class ="col-md-6 col-sm-6 col-xs-6"> 
+						<button type="button" class="btn btn-default" ng-click="item.buy(buyMultiplier)">Buy {{item.getBuy * buyMultiplier | number : 0}}mg</button>
+					</div>
+					<div class ="col-md-6 col-sm-6 col-xs-6"> 
+						<div class="pull-right">
+							<span>{{item.getSell | number: 0}}mg </span>
+							<button type="button" ng-click="item.sell()" class="btn btn-default">Sell</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div> 
+</div> 
