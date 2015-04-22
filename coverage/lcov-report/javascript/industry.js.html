@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for javascript\industry.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">javascript\industry.js</span></h1>
+    <h2>
+        Statements: <span class="metric">7.14% <small>(3 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">9.09% <small>(1 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">7.14% <small>(3 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">javascript/</a> &#187; industry.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//write code to manage prisoners
+(function(){
+	var industry = <span class="fstat-no" title="function not covered" >function($http, $interval){</span>
+		
+<span class="cstat-no" title="statement not covered" >		var comodity = <span class="fstat-no" title="function not covered" >function(name, sell, buy){</span></span>
+<span class="cstat-no" title="statement not covered" >			var count = 0;</span>
+<span class="cstat-no" title="statement not covered" >			var efficiency = 0.1;</span>
+<span class="cstat-no" title="statement not covered" >			self = {};</span>
+<span class="cstat-no" title="statement not covered" >			self.name = name;</span>
+<span class="cstat-no" title="statement not covered" >			self.getSell = sell;</span>
+<span class="cstat-no" title="statement not covered" >			self.getBuy = buy;</span>
+<span class="cstat-no" title="statement not covered" >			self.getCount = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >				return count; </span>
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			self.makeItem = <span class="fstat-no" title="function not covered" >function(amount){</span></span>
+<span class="cstat-no" title="statement not covered" >				count += amount * efficiency;</span>
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			self.useItem = <span class="fstat-no" title="function not covered" >function(cost){</span></span>
+<span class="cstat-no" title="statement not covered" >				count -= cost</span>
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			self.buy = <span class="fstat-no" title="function not covered" >function(amount){</span></span>
+<span class="cstat-no" title="statement not covered" >				if(sugar.getCount() &gt;= buy * amount){</span>
+<span class="cstat-no" title="statement not covered" >					count += amount || 1;</span>
+<span class="cstat-no" title="statement not covered" >					sugar.useItem(buy * amount)</span>
+<span class="cstat-no" title="statement not covered" >					self.saveState()</span>
+				}
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			self.sell = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >				if(count &gt;= 1){</span>
+<span class="cstat-no" title="statement not covered" >					sugar.buy(count * sell);</span>
+<span class="cstat-no" title="statement not covered" >					count = 0;</span>
+<span class="cstat-no" title="statement not covered" >					self.saveState();</span>
+				}
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			self.saveState = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >				sessionStorage.setItem('industry-' + name, count)</span>
+&nbsp;
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			self.loadState = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >				var state = Number(sessionStorage.getItem('industry-' + name));</span>
+<span class="cstat-no" title="statement not covered" >				if(state){</span>
+<span class="cstat-no" title="statement not covered" >					count = state;</span>
+				}
+			}
+<span class="cstat-no" title="statement not covered" >			return self;</span>
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		var sugar = new comodity("Sugar", 0, 0);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		var comodities = {</span>
+			sugar : sugar,
+			taffy : new comodity("Taffy", 10, 15),
+			jellyBean: new comodity("JellyBean", 30, 50),
+			doughNut: new comodity("Doughnut", 100, 600),
+			jawBreaker: new comodity("Jawbreaker", 250, 1000),
+			peppermint: new comodity("Peppermint", 600, 3000),
+			rockCandy: new comodity("Rock-Candy", 1500, 9000)
+		};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		for(name in comodities){</span>
+<span class="cstat-no" title="statement not covered" >			comodities[name].loadState()</span>
+		}
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		var save = $interval(<span class="fstat-no" title="function not covered" >function saveComodities(){</span></span>
+<span class="cstat-no" title="statement not covered" >			for(name in comodities){</span>
+<span class="cstat-no" title="statement not covered" >				comodities[name].saveState()</span>
+			}
+		},
+		30000);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		return comodities;</span>
+&nbsp;
+	};
+&nbsp;
+	var module = angular.module("marcApp")
+<span class="cstat-no" title="statement not covered" >	module.factory("industry", industry)</span>
+}())</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 21 2015 23:13:41 GMT-0700 (Pacific Daylight Time)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
