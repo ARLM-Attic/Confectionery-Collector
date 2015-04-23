@@ -7,11 +7,16 @@
 		//cost = starting cost of one unit. 
 		//exponent = cost's exponential growth. 
 		var candyPerson = function(imgName, industry, production, cost, id){
+			expect(cost).to.be.ok;
+			expect(production).to.be.ok;
+			expect(id).to.be.ok
+
 			var population = 0;
 			var self = {}
 			self.id = id || 0;
 			self.imgName = imgName || "missingno"
 			self.industry = industry;
+			self.production = production
 
 			self.getCount = function(){
 				return population;
@@ -54,10 +59,15 @@
 				}
 			}
 
-			self.incrementInterval = $interval(function harvestTaffy(){
+			self.produce = function(){
 				if(population > 0){
-					industry.makeItem(population)
+					industry.makeItem(population * self.production)
 				}
+			}
+
+			self.incrementInterval = $interval(function harvestTaffy(){
+				//TODO: pull out of candyPerson constructor 
+				self.produce()
 			},
 			100);
 
@@ -80,6 +90,12 @@
 		for(name in people){
 			people[name].loadState()
 		}
+
+		//expose candyPerson in prototype for unit tests
+		Object.defineProperty(people, "candyPerson", {
+		  enumerable: false,
+		  value: candyPerson
+		});
 
 		
 

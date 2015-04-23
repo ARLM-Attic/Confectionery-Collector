@@ -109,3 +109,5 @@ marcApp.controller('AnalyticsController', function($scope) {
     $scope.message = 'MeowMix!';
     
 });
+
+var expect = chai.expect;

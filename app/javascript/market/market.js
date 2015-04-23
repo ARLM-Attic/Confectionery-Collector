@@ -4,14 +4,13 @@ angular.module('marcApp.market', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/Industry', {
-        templateUrl : 'views/market.html',
+        templateUrl : 'javascript/market/market.html',
         controller  : 'MarketCtrl'
     })
 }])
 
 // create the controller and inject Angular's $scope
 .controller('MarketCtrl', ["$scope", "candyPeople", "industry", function($scope, candyPeople, industry) {
-    console.log("market")
 
     //angular needs an array
     var output = [];
@@ -22,6 +21,7 @@ angular.module('marcApp.market', ['ngRoute'])
     $scope.sugar = output.shift();
     $scope.buyMultiplier = 1;
     $scope.setMultiplier = function(amount){
+        expect(amount).to.be.within(1,100);
         $scope.buyMultiplier = amount
     }
 

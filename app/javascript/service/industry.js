@@ -1,7 +1,6 @@
 //write code to manage prisoners
 (function(){
 	var industry = function($http, $interval){
-		
 		var comodity = function(name, sell, buy){
 			var count = 0;
 			var efficiency = 0.1;
@@ -64,17 +63,30 @@
 			rockCandy: new comodity("Rock-Candy", 1500, 9000)
 		};
 
+		//load all the states
 		for(name in comodities){
 			comodities[name].loadState()
 		}
 
-
+		//save every so often
 		var save = $interval(function saveComodities(){
 			for(name in comodities){
 				comodities[name].saveState()
 			}
 		},
 		30000);
+
+		//expose comodity in prototype for unit tests
+		Object.defineProperty(comodities, "comodity", {
+		  enumerable: false,
+		  value: comodity
+		});
+
+		//expose for unit tests
+		Object.defineProperty(comodities, "save", {
+		  enumerable: false,
+		  value: save
+		});
 
 		return comodities;
 
