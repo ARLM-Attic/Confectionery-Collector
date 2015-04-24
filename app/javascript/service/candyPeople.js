@@ -65,12 +65,6 @@
 				}
 			}
 
-			self.incrementInterval = $interval(function harvestTaffy(){
-				//TODO: pull out of candyPerson constructor 
-				self.produce()
-			},
-			100);
-
 			return self
 		}
 
@@ -90,6 +84,14 @@
 		for(name in people){
 			people[name].loadState()
 		}
+
+
+		self.incrementInterval = $interval(function harvestTaffy(){
+			for(name in people){
+				people[name].produce()
+			}
+		},100);
+		
 
 		//expose candyPerson in prototype for unit tests
 		Object.defineProperty(people, "candyPerson", {
