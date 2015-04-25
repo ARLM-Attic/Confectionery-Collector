@@ -23,7 +23,7 @@
 
 			self.buy = function(amount){
 				expect(amount).to.be.ok.and.a('number')
-				if(sugar.getCount() >= buy * amount){
+				if(amount && sugar.getCount() >= buy * amount){
 					count += amount || 1;
 					sugar.useItem(buy * amount)
 					self.saveState()

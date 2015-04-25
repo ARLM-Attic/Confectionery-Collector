@@ -20,12 +20,19 @@ angular.module('marcApp.market', ['ngRoute'])
     //pull sugar out because it's the currency of the market
     $scope.sugar = output.shift();
     $scope.buyMultiplier = 1;
+
     $scope.setMultiplier = function(amount){
-        expect(amount).to.be.within(1,100);
+        expect(amount).to.be.within(0,100);
         $scope.buyMultiplier = amount
     }
 
-    $scope.industry = output;
+    $scope.getMaxBuy = function(item){
+        if(!$scope.buyMultiplier){
+            return Math.floor($scope.sugar.getCount()/item.getBuy);    
+        }
+    }
+
+    $scope.industry = output
 
     $scope.isActive = function(value) {
         return $scope.buyMultiplier === value;
