@@ -48,14 +48,17 @@
 			}
 
 			self.saveState = function(){
-				sessionStorage.setItem(self.imgName + '-' + id, population)
-
+				window.localStorage.setItem(self.imgName + '-' + id, population)
 			}
 
 			self.loadState = function(){
-				var state = Number(sessionStorage.getItem(self.imgName + '-' + id));
-				if(state){
-					population = state;
+
+				var state = Number(window.localStorage.getItem(self.imgName + '-' + id));
+				if(!state){
+					population = Number(sessionStorage.getItem(self.imgName + '-' + id)) || 0;
+					self.saveState();
+				} else if(state){
+					population = state
 				}
 			}
 

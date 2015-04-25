@@ -39,14 +39,17 @@
 			}
 
 			self.saveState = function(){
-				sessionStorage.setItem('industry-' + name, count)
+				window.localStorage.setItem('industry-' + name, count)
 
 			}
 
 			self.loadState = function(){
-				var state = Number(sessionStorage.getItem('industry-' + name));
-				if(state){
-					count = state;
+				var state = Number(window.localStorage.getItem('industry-' + name));
+				if(!state){
+					count = Number(sessionStorage.getItem('industry-' + name)) || 0;
+					self.saveState();
+				} else if(state){
+					count = state
 				}
 			}
 			return self;
