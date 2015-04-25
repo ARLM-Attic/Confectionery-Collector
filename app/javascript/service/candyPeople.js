@@ -80,12 +80,15 @@
 			rockCandy: new candyPerson(false, industry.rockCandy, 1, 13000, 6)
 		}
 
-		//start game off with one taffy person
-		people.taffy.seed()
-
+		
 		//now load stuff. Loading should DEFINITLY COME AFTER SEEDING.
 		for(name in people){
 			people[name].loadState()
+		}
+
+		//start game off with one taffy person
+		if(!people.taffy.getCount()){
+			people.taffy.seed()
 		}
 
 
