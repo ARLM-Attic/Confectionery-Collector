@@ -13,6 +13,7 @@ describe('marcApp.market module', function() {
 	    controller = $controller('MarketCtrl', {
 	      $scope: scope
 	    });
+	    window.localStorage.clear();
   	}));
 
     it('Should exsist', function() {
