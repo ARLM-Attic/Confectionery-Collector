@@ -5,6 +5,11 @@ marcApp.config(function($routeProvider) {
 
         // route for the home page
         .when('/', {
+            templateUrl : 'views/prisoners.html',
+            controller  : 'PrisonersController'
+        })
+        // route for the home page
+        .when('/Overview', {
             templateUrl : 'views/home.html',
             controller  : 'MainController'
         })
