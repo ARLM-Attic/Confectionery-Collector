@@ -17,12 +17,15 @@ angular.module('marcApp.market', ['ngRoute'])
     for(var i in industry){
         output.push(industry[i]);
     }
+    
+
     //pull sugar out because it's the currency of the market
     $scope.sugar = output.shift();
-    $scope.buyMultiplier = 1;
+    $scope.buyMultiplier = Number(window.localStorage.getItem('buyMultiplier')) || 1;
 
     $scope.setMultiplier = function(amount){
         expect(amount).to.be.within(0,100);
+        window.localStorage.setItem('buyMultiplier', amount)
         $scope.buyMultiplier = amount
     }
 
