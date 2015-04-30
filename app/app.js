@@ -48,7 +48,7 @@ marcApp.controller('SideBar', function($scope, $location) {
 });
 
 
-marcApp.controller('MainController', ["$scope", "candyPeople", "industry", "stats", function($scope, candyPeople, industry, stats) {
+marcApp.controller('MainController', ["$scope", "candyPeople", "industry", "stats",  function($scope, candyPeople, industry, stats) {
 
     console.log("hodor")
     
@@ -71,18 +71,6 @@ marcApp.controller('StockController', ["$scope", "stats", "$timeout", function($
 
 }]);
 
-
-
-
-
-// create the controller and inject Angular's $scope
-marcApp.controller('SecurityController', function($scope) {
-    console.log("security")
-    // create a message to display in our view
-    $scope.message = 'MeowMix!';
-    
-});
-
 // create the controller and inject Angular's $scope
 marcApp.controller('PrisonersController', ["$scope", "candyPeople", "industry", function($scope, candyPeople, industry) {
 
@@ -99,20 +87,5 @@ marcApp.controller('PrisonersController', ["$scope", "candyPeople", "industry", 
     $scope.candyPeople = output;
     
 }]);
-
-// create the controller and inject Angular's $scope
-marcApp.controller('ReportsController', function($scope) {
-    console.log("reports")
-    // create a message to display in our view
-    $scope.message = 'MeowMix!';
-    
-});
-// create the controller and inject Angular's $scope
-marcApp.controller('AnalyticsController', function($scope) {
-    console.log("analytics")
-    // create a message to display in our view
-    $scope.message = 'MeowMix!';
-    
-});
 
 var expect = chai.expect;

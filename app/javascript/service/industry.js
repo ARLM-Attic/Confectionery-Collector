@@ -8,6 +8,8 @@
 			self.name = name;
 			self.getSell = sell;
 			self.getBuy = buy;
+			self.achievements = function(){console.log("Empty Achievements")};
+
 			self.getCount = function(){
 				return count; 
 			}
@@ -36,6 +38,10 @@
 					count = 0;
 					self.saveState();
 				}
+			}
+
+			self.setAcheivements = function(achievement){
+				self.achievements = achievement
 			}
 
 			self.saveState = function(){
