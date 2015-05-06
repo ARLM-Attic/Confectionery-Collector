@@ -5,6 +5,9 @@ describe('Industry', function() {
 	expect = chai.expect;
 	var controller, candyPeople, industry, scope, offset = 10
 	beforeEach(module('marcApp'));
+	beforeEach(function(){
+		localStorage.clear();
+	})
 
 	//setup services and controller.
 	beforeEach(inject(function (_candyPeople_, _industry_, $controller, $rootScope) {
@@ -29,7 +32,7 @@ describe('Industry', function() {
 
 	describe("method", function(){
 		var sampleIndustry;
-		beforeEach(function(){
+		beforeEach(function(){	
 			sampleIndustry = new industry.comodity("Taffy", 10, 15)
 		})
 
@@ -41,7 +44,7 @@ describe('Industry', function() {
 
 		it("buy should increase item when there's sugar", function(){
 			expect(sampleIndustry.getCount()).to.equal(0);
-			industry.sugar.buy(100000)
+			industry.sugar.buy(100000)	
 			sampleIndustry.buy(1)
 			expect(sampleIndustry.getCount()).to.equal(1);
 		})

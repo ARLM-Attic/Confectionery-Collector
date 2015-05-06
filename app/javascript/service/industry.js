@@ -6,7 +6,7 @@
 		var comodity = function(name, sell, buy) {
 			var count = 0;
 			var efficiency = 0.1;
-			self = {};
+			var self = {};
 			self.name = name;
 			self.getSell = sell;
 			self.getBuy = buy;
