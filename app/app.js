@@ -1,3 +1,5 @@
+'use strict';
+
 var marcApp = angular.module('marcApp', ['ngRoute', 'chart.js', 'marcApp.market']);
 // configure our routes
 marcApp.config(function($routeProvider) {
