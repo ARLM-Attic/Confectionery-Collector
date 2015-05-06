@@ -81,7 +81,7 @@
 		};
 
 
-		//now load stuff. Loading should DEFINITLY COME AFTER SEEDING.
+		//now load stuff.
 		for (name in people) {
 			people[name].loadState();
 		}
