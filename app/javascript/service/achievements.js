@@ -22,7 +22,6 @@
 					self.win();
 				}
 			}
-			debugger;
 			return self
 		}		
 

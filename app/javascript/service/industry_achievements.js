@@ -27,7 +27,6 @@
 		}
 		return achievement;
 	};
-	debugger;
 	var module = angular.module("marcApp")
 	module.factory("industry_achievement", achievements)
 }())
