@@ -21,6 +21,13 @@ module.exports = function(config){
 
     browsers : ['Chrome'],
     reporters : ['progress', 'coverage'],
+
+    coverageReporter: {
+        type: 'lcov',
+        dir: 'coverage',
+        file: 'lcov.info'
+    },
+
     preprocessors : {
       '**/app.js': 'coverage',
       '**/app/javascript/!(*vendor)/!(*test).js': 'coverage'
