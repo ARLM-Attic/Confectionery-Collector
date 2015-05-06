@@ -1,3 +1,5 @@
+'use strict';
+
 //write code to manage prisoners
 (function() {
 	var stats = function($http, $interval, industry, candyPeople) {
