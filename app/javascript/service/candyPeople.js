@@ -2,7 +2,7 @@
 
 //write code to manage prisoners
 (function() {
-	var candyPeople = function($http, $interval, industry) {
+	var candyPeople = function($http, $interval, industry, achievement) {
 		//Candy Person base class.
 		//industry = link to industry object for production methods
 		//production = how much one unit will make.
@@ -19,6 +19,7 @@
 			self.imgName = imgName || 'missingno';
 			self.industry = industry;
 			self.production = production;
+			self.achievements = [];
 
 			self.getCount = function() {
 				return population;
@@ -41,6 +42,8 @@
 				if (industry.getCount() >= cost) {
 					industry.useItem(cost);
 					population += 1;
+					self.checkYourSelf();
+					//wreck yourself. 
 					self.saveState();
 				}
 			};
@@ -70,6 +73,12 @@
 				}
 			};
 
+			self.checkYourSelf = function(){
+				for(var item in self.achievements){
+					self.achievements[item].check();
+				}
+			}
+
 			return self;
 		};
 
@@ -81,8 +90,9 @@
 			peppermint: new candyPerson(false, industry.peppermint, 1, 5000, 5),
 			rockCandy: new candyPerson(false, industry.rockCandy, 1, 13000, 6)
 		};
-
-
+		
+		people.taffy.achievements.push(new achievement(people.taffy, 2, "Yo got dat Taffy yall", "get 2 Taffy"))
+			
 		//now load stuff.
 		for (name in people) {
 			people[name].loadState();

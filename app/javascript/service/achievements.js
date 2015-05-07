@@ -2,25 +2,27 @@
 
 //write code to manage prisoners
 (function() {
-	var achievements = function($http, $interval, industry) {
+	var achievements = function($http, $interval) {
 		//first load all achievements from local storage.
 		var achievement = function(item, amount, title, description) {
 			var self = {};
-			self.unlocked = false;
+			self.unlocked = localStorage.getItem(self.title) || false;
 			self.id = 0,
 			self.item = item;
 			self.amountNeeded = amount;
-			self.title = 'Candy Candy!';
-			self.description = 'You started playing this game!';
+			self.title = title;
+			self.description = description;
+			
+
 			self.win = function() {
 				self.unlocked = true;
-
+				localStorage.setItem( self.title, self.unlocked);
 				//using a global variable in angular is no good
 				toastr.success(self.title, self.description);
 			};
 
 			self.check = function() {
-				if (self.item.getCount() >= self.amountNeeded) {
+				if (!self.unlocked && self.item.getCount() >= self.amountNeeded) {
 					self.win();
 				}
 			};

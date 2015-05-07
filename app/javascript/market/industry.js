@@ -2,7 +2,7 @@
 
 //write code to manage prisoners
 (function() {
-	var industry = function($http, $interval) {
+	var industry = function($http, $interval, achievement) {
 		var comodity = function(name, sell, buy) {
 			var count = 0;
 			var efficiency = 0.1;
@@ -10,7 +10,7 @@
 			self.name = name;
 			self.getSell = sell;
 			self.getBuy = buy;
-			self.achievements = function() {console.log('Empty Achievements')};
+			self.achievements = [];
 
 			self.getCount = function() {
 				return count;
@@ -32,6 +32,7 @@
 					sugar.useItem(buy * amount);
 					self.saveState();
 				}
+				self.checkYourSelf()
 			};
 
 			self.sell = function() {
@@ -60,10 +61,18 @@
 					count = state;
 				}
 			};
+			
+			self.checkYourSelf = function(){
+				for(var item in self.achievements){
+					self.achievements[item].check();
+				}
+			}
+
 			return self;
 		};
 
 		var sugar = new comodity('Sugar', 0, 0);
+		sugar.achievements.push(new achievement(sugar, 100, "Yo got dat sugga yall", "get 100 sugar"))
 
 		var comodities = {
 			sugar: sugar,
