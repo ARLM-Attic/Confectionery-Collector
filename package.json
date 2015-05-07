@@ -1,5 +1,5 @@
 {
-  "name": "CandyEmpirical",
+  "name": "ConfectioneryCollector",
   "private": true,
   "version": "0.0.1",
   "description": "A game about candy making candy",
@@ -17,8 +17,8 @@
   },
   "bugs": {
     "url": "https://github.com/Sdonai/Candy-Empirical/issues"
-  },
-  "scripts": {
+  }
+,  "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1",
