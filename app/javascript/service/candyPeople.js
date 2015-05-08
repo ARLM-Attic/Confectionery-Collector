@@ -92,11 +92,12 @@
 		};
 		
 		people.taffy.achievements.push(new achievement(people.taffy, 2, "Yo got dat Taffy yall", "get 2 Taffy"))
-		people.jellyBean.achievements.push(new achievement(people.jellyBean, 2,"HO SHIT DAT JELLY", "get 2 Jelly"))
-		people.doughNut.achievements.push(new achievement(people.doughNut, 2, "Dem Nuts", "get 2 Doughnuts"))
-		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 2, "Jaw Cracker", "get 2 Jawbreaker"))
-		people.peppermint.achievements.push(new achievement(people.peppermint, 2, "GET PEPPERD", "get 2 Peppermins"))
-		people.rockCandy.achievements.push(new achievement(people.rockCandy, 2, "Rock hard", "get 2 Rock Candy"))	
+		people.jellyBean.achievements.push(new achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "get 1 Jelly"))
+		people.doughNut.achievements.push(new achievement(people.doughNut, 1, "Dem Nuts", "get 1 Doughnuts"))
+		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 1, "Jaw Cracker", "get 1 Jawbreaker"))
+		people.peppermint.achievements.push(new achievement(people.peppermint, 1, "GET PEPPERD", "get 1 Peppermins"))
+		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Rock hard", "get 1 Rock Candy"))	
+
 		//now load stuff.
 		for (name in people) {
 			people[name].loadState();
