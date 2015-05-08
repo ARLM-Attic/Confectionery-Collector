@@ -1,20 +1,24 @@
 <!-- Industry.html -->
-<div class="jumbotron text-center">
-    <h1>Achievements</h1>
 
-    <p>Achievements subtitle</p>
-
+<div  class="page-header" style="margin-top: -15px;"> 
+    <h1 >Achievements </h1>
+    Modestly long descriptions of achievements. 
 </div>
-<div class="container">
+
     <div class="row tight">
-    	<div class="col-md-4 well well-sm" ng-repeat="item in achievements">
-    		<div style="width: 30%; float: left">
-    			<img src="images/taffy-CANDY.png" alt="..." class="img-circle img-responsive">
-    		</div> 
-    		<div style="width: 70%; float: left">
-    			<h3> {{item.title}} </h3>
-    			<p> {{item.description}} </p>
-    		</div>
+    	<div class="col-md-3" ng-repeat="item in achievements">
+            <div class="well well-sm" style="  overflow: hidden;"> 
+        		<div style="width: 30%; float: left">
+        			<img ng-if="item.unlocked" ng-src="images/taffy-CANDY.png" alt="..." class="img-circle img-responsive">
+                    <img ng-if="!item.unlocked" ng-src="images/missingno.png" alt="..." class="img-circle img-responsive">
+        		</div> 
+        		<div style="width: 70%; float: left">
+                    <div style="padding: 5px"> 
+            			<h5> {{item.title}} </h5>
+            			<p> {{item.description}} </p>
+                    </div>
+        		</div>
+            </div> 
     	</div> 
     </div>
-</div>
+
