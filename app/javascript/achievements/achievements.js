@@ -11,7 +11,6 @@ angular.module('marcApp.achievements', ['ngRoute'])
 
 // create the controller and inject Angular's $scope
 .controller('AchievementCtrl', ["$scope", "candyPeople", "industry", function($scope, candyPeople, industry) {
-    $scope.test = "penis";
     $scope.achievements = [];
     for (var item in industry){
         $scope.achievements = $scope.achievements.concat(industry[item].achievements)
@@ -20,4 +19,4 @@ angular.module('marcApp.achievements', ['ngRoute'])
     for (var item in candyPeople){
         $scope.achievements = $scope.achievements.concat(candyPeople[item].achievements)
     }
-    }]);
+}]);
