@@ -1,6 +1,6 @@
 'use strict';
 
-var marcApp = angular.module('marcApp', ['ngRoute', 'chart.js', 'marcApp.market']);
+var marcApp = angular.module('marcApp', ['ngRoute', 'chart.js', 'marcApp.market','marcApp.achievements']);
 // configure our routes
 marcApp.config(function($routeProvider) {
     $routeProvider
@@ -31,11 +31,7 @@ marcApp.config(function($routeProvider) {
             templateUrl: 'views/reports.html',
             controller: 'ReportsController'
         })
-        // route for the analytics page
-        .when('/Achievements', {
-            templateUrl: 'views/achievements.html',
-            controller: 'AnalyticsController'
-        })
+        
         .otherwise({redirectTo: '/'});
     }
 );

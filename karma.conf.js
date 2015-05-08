@@ -14,7 +14,8 @@ module.exports = function(config){
       'app/javascript/vendor/angular-chart.js',
       'app/app.js',
       'app/javascript/service/*.js',
-      'app/javascript/market/*.js'
+      'app/javascript/market/*.js',
+      'app/javascript/achievements/*.js'
     ],
 
     autoWatch : true,
