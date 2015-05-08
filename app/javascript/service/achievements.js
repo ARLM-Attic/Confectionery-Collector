@@ -6,7 +6,7 @@
 		//first load all achievements from local storage.
 		var achievement = function(item, amount, title, description) {
 			var self = {};
-			self.unlocked = localStorage.getItem(self.title) || false;
+			self.unlocked = localStorage.getItem(title) || false;
 			self.id = 0,
 			self.item = item;
 			self.amountNeeded = amount;
