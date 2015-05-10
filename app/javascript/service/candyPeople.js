@@ -91,12 +91,12 @@
 			rockCandy: new candyPerson(false, industry.rockCandy, 1, 13000, 6)
 		};
 		
-		people.taffy.achievements.push(new achievement(people.taffy, 2, "Yo got dat Taffy yall", "get 2 Taffy"))
-		people.jellyBean.achievements.push(new achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "get 1 Jelly"))
-		people.doughNut.achievements.push(new achievement(people.doughNut, 1, "Dem Nuts", "get 1 Doughnuts"))
-		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 1, "Jaw Cracker", "get 1 Jawbreaker"))
-		people.peppermint.achievements.push(new achievement(people.peppermint, 1, "GET PEPPERD", "get 1 Peppermins"))
-		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Rock hard", "get 1 Rock Candy"))	
+		people.taffy.achievements.push(new achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"))
+		people.jellyBean.achievements.push(new achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "Create your first Jelly Person!"))
+		people.doughNut.achievements.push(new achievement(people.doughNut, 1, "Dem Nuts", "Breath life into a donut"))
+		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 1, "Jaw Cracker", "Bring Jawbreaker person into existence"))
+		people.peppermint.achievements.push(new achievement(people.peppermint, 1, "GET PEPPERD", "Manifest Sentient Peppermints"))
+		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Purity", "Refine first pure Rock"))	
 
 		//now load stuff.
 		for (name in people) {
