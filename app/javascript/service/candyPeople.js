@@ -97,7 +97,7 @@
 		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 1, "Jaw Cracker", "Bring Jawbreaker person into existence"))
 		people.peppermint.achievements.push(new achievement(people.peppermint, 1, "GET PEPPERD", "Manifest Sentient Peppermints"))
 		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Purity", "Refine first pure Rock"))	
-
+		people.rockCandy.achievements.push(new achievement(people.rockCandy, 2, "goddamit jessy", "Make a second Sentient Rock Candy"))
 		//now load stuff.
 		for (name in people) {
 			people[name].loadState();
