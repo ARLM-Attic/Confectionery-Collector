@@ -93,10 +93,10 @@
 		
 		people.taffy.achievements.push(new achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"))
 		people.jellyBean.achievements.push(new achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "Create your first Jelly Person!"))
-		people.doughNut.achievements.push(new achievement(people.doughNut, 1, "Dem Nuts", "Breath life into a donut"))
+		people.doughNut.achievements.push(new achievement(people.doughNut, 1, "Hello Donut", "Breath life into donut kind"))
 		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 1, "Jaw Cracker", "Bring Jawbreaker person into existence"))
 		people.peppermint.achievements.push(new achievement(people.peppermint, 1, "GET PEPPERD", "Manifest Sentient Peppermints"))
-		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Purity", "Refine first pure Rock"))	
+		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Purity", "Refine the purest Rock Candy"))	
 		people.rockCandy.achievements.push(new achievement(people.rockCandy, 2, "goddamit jessy", "Make a second Sentient Rock Candy"))
 		//now load stuff.
 		for (name in people) {

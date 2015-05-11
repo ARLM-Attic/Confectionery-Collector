@@ -72,8 +72,8 @@
 		};
 
 		var sugar = new comodity('Sugar', 0, 0);
-		sugar.achievements.push(new achievement(sugar, 1, "First Grains", "Earn your first sugar"))
-		sugar.achievements.push(new achievement(sugar, 100, "Starting the Sugar", "Get 100 sugar"))
+		sugar.achievements.push(new achievement(sugar, 1, "First Grains", "Earn your first sugar from the market"))
+		sugar.achievements.push(new achievement(sugar, 100, "Starting the Sugar", "Get 100 sugar from the market"))
 
 		var comodities = {
 			sugar: sugar,
