@@ -42,7 +42,9 @@
         <span class="sr-only">{{worker.getCostProgress()}}% Complete (warning)</span>
       </div>
     </div>
-    <button type="button" class="btn btn-default btn-cost" ng-click="worker.mkTaffyPerson()" style="width: 100%;">Cost: {{worker.getCost()| number: 0}}</button>
+    <div data-toggle="tooltip" title="{{worker.industry.getCount() == 0 ?'Buy '+ worker.industry.name + ' Candy from the market in order to build': ''}}" > 
+        <button type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()" style="width: 100%;">Cost: {{worker.getCost()| number: 0}}</button>
+    </div> 
     <div><span class="field">Population:</span> {{worker.getCount()| number}} </div>
  </div>
 </div>

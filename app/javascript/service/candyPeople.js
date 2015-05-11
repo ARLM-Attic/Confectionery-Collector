@@ -17,6 +17,7 @@
 			var self = {};
 			self.id = id || 0;
 			self.imgName = imgName || 'missingno';
+			self.imgfullsrc = imgName ? 'images/' + imgName + '.png' : 'images/missingno.png';
 			self.industry = industry;
 			self.production = production;
 			self.achievements = [];

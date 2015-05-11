@@ -8,6 +8,7 @@
 			var efficiency = 0.1;
 			var self = {};
 			self.name = name;
+			self.imgfullsrc = name ? 'images/' + name + '-CANDY.png' : 'images/missingno.png';
 			self.getSell = sell;
 			self.getBuy = buy;
 			self.achievements = [];
