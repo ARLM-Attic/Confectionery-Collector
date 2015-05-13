@@ -48,3 +48,26 @@
     <div><span class="field">Population:</span> {{worker.getCount()| number}} </div>
  </div>
 </div>
+
+<div class="visible-xs">
+    <div class="row tight">
+        <div ng-repeat="worker in candyPeople | orderBy: 'id'">
+            <div class="well well-sm" style="  overflow: hidden;"> 
+                <div style="width: 30%; float: left">
+                    <div class="text-center">{{worker.industry.name}} Maker</div> 
+                    <img ng-src="images/{{worker.imgName}}.png" src="images/taffy.png" class="img-thumbnail" style="width: 100%;"> 
+                </div> 
+                <div style="width: 70%; float: left">
+                    <div style="padding: 5px"> 
+                        <h5> {{worker.industry.getCount()| number : 0}} </h5>
+                        <p> 
+                            <button type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()" style="width: 100%;">
+                                Cost: {{worker.getCost()| number: 0}}
+                            </button> 
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div>
+</div>
