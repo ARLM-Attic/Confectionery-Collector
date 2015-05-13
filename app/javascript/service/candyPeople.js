@@ -88,8 +88,8 @@
 			jellyBean: new candyPerson('jellybean', industry.jellyBean, 1, 30, 2),
 			doughNut: new candyPerson('doughnut', industry.doughNut, 1, 200, 3),
 			jawBreaker: new candyPerson('jawbreaker', industry.jawBreaker, 1, 700, 4),
-			peppermint: new candyPerson(false, industry.peppermint, 1, 5000, 5),
-			rockCandy: new candyPerson(false, industry.rockCandy, 1, 13000, 6)
+			peppermint: new candyPerson('peppermint', industry.peppermint, 1, 5000, 5),
+			rockCandy: new candyPerson('rockCandy', industry.rockCandy, 1, 13000, 6)
 		};
 		
 		people.taffy.achievements.push(new achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"))
