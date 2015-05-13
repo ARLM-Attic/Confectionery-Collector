@@ -74,11 +74,17 @@
 .main {
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .market-field{
+    margin-top: .2em
+  }
+}
 @media (min-width: 768px) {
   .main {
     padding-right: 40px;
     padding-left: 40px;
   }
+
 }
 .main .page-header {
   margin-top: 0;
