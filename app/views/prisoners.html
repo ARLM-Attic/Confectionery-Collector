@@ -5,9 +5,7 @@
     Candy makers can be built by combining their own candy.
   </div>
 </div>
-
-
-<div class="text-center"> 
+<div class="text-center hidden-xs"> 
     <div class="col-md-2 col-xs-4"> 
         <div> <div class="visible-xs visible-sm">Taffy:</div> <span class="visible-md visible-lg">Taffy:</span> {{items.taffy.getCount()| number : 0}} </div> 
     </div>
@@ -33,7 +31,9 @@
     </div>
 </div>
 
-<div class="row">
+
+
+<div class="row tight hidden-xs">
 <div ng-repeat="worker in candyPeople | orderBy: 'id'" class="col-md-2 col-sm-4 col-xs-4" style="padding-top: 15px;">
     <div class="text-center">{{worker.industry.name}} Maker</div>    
     <img ng-src="images/{{worker.imgName}}.png" src="images/taffy.png" class="img-thumbnail" style="width: 100%;"> 
