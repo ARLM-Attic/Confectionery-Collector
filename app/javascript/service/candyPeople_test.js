@@ -24,8 +24,8 @@ describe('CandyPeople', function() {
 		beforeEach(function(){
 			sampleIndustry = new industry.comodity("itemtest", 10, 15);
 
-			var name = "personTest", production = "1", cost = 10, id = 1;
-			sample = new candyPeople.candyPerson(name, sampleIndustry, production, cost, id);
+			name = "personTest", production = "1", cost = 10, id = 1;
+			sample = new candyPeople.CandyPerson(name, sampleIndustry, production, cost, id);
 		});
 		
 
@@ -48,8 +48,8 @@ describe('CandyPeople', function() {
 		beforeEach(function(){
 			sampleIndustry = new industry.comodity("itemtest", 10, 15);
 
-			var name = "personTest", production = "1", cost = 10, id = 1;
-			sample = new candyPeople.candyPerson(name, sampleIndustry, production, cost, id);
+			name = "personTest", production = "1", cost = 10, id = 1;
+			sample = new candyPeople.CandyPerson(name, sampleIndustry, production, cost, id);
 		});
 		
 
