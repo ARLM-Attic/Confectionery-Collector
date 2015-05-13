@@ -16,21 +16,21 @@
 <div class="row tight"> 
 	<div class="col-md-6" ng-repeat="item in industry"> 
 		<div class="row mellow well well-sm">
-			<div class="col-md-3 col-sm-3 col-xs-3" class="thumbnail">
+			<div style="width: 20%; float: left">
 				<img ng-src="{{'images/' + item.name + '-CANDY.png'}}" alt="..." class="img-circle img-responsive">
 			</div>
-			<div class="col-md-9 col-sm-9 col-xs-9"> 
-				<div class="row" style="padding-top: 0px" >
+			<div style="width: 80%; float: left"> 
+				<div  style="width: 100%; padding-top: 0px" >
 					<div class ="col-md-7 col-sm-7 col-xs-7"> 
-						<h3 class="text-left">{{item.name}}</h3>
+						<h3 class="text-left" style="margin-top: .2em">{{item.name}}</h3>
 						<!-- <h4 class="text-right bottom">1,000/s</h4> -->
 					</div>
-					<div class ="col-md-5 col-sm-5 col-xs-5"> 
-						<h3 class="text-right">{{item.getCount() | number : 0}}</h3>
+					<div class ="col-md-5 col-sm-5 col-xs-5" > 
+						<h3 class="text-right" style="margin-top: .2em">{{item.getCount() | number : 0}}</h3>
 					</div>
 				</div>
 
-				<div class="row tight">
+				<div style="width: 100%;">
 					<div class ="col-md-6 col-sm-6 col-xs-6"> 
 						<button type="button" ng-show="buyMultiplier" class="btn btn-default" ng-click="item.buy(buyMultiplier)">
 							Buy {{item.getBuy * buyMultiplier | number : 0}}mg
@@ -40,8 +40,8 @@
 							Buy {{getMaxBuy(item)| number : 0}}x
 						</button>
 					</div>
-					<div class ="col-md-6 col-sm-6 col-xs-6"> 
-						<div class="pull-right" style="padding-right: 0">
+					<div class ="col-md-6 col-sm-6 col-xs-6" style="padding-right: 0"> 
+						<div class="pull-right" >
 							<span>{{item.getSell | number: 0}}mg </span>
 							<button type="button" ng-click="item.sell()" class="btn btn-default">Sell</button>
 						</div>
