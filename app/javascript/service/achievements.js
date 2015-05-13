@@ -7,7 +7,7 @@
 		var achievement = function(item, amount, title, description) {
 			var self = {};
 			self.unlocked = localStorage.getItem(title) || false;
-			self.id = 0,
+			self.id = 0;
 			self.item = item;
 			self.amountNeeded = amount;
 			self.title = title;
