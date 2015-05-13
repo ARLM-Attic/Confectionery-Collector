@@ -2,7 +2,7 @@
 
 //write code to manage prisoners
 (function() {
-	var industry = function($http, $interval, achievement) {
+	var industry = function($http, $interval, Achievement) {
 		var comodity = function(name, sell, buy) {
 			var count = 0;
 			var efficiency = 0.1;
@@ -73,8 +73,8 @@
 		};
 
 		var sugar = new comodity('Sugar', 0, 0);
-		sugar.achievements.push(new achievement(sugar, 1, "First Grains", "Earn your first sugar from the market"))
-		sugar.achievements.push(new achievement(sugar, 100, "Starting the Sugar", "Get 100 sugar from the market"))
+		sugar.achievements.push(new Achievement(sugar, 1, "First Grains", "Earn your first sugar from the market"))
+		sugar.achievements.push(new Achievement(sugar, 100, "Starting the Sugar", "Get 100 sugar from the market"))
 
 		var comodities = {
 			sugar: sugar,

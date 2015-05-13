@@ -33,5 +33,5 @@
 	};
 
 	var module = angular.module('marcApp');
-	module.factory('achievement', achievements);
+	module.factory('Achievement', achievements);
 }());

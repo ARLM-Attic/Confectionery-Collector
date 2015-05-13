@@ -2,13 +2,13 @@
 
 //write code to manage prisoners
 (function() {
-	var candyPeople = function($http, $interval, industry, achievement) {
+	var candyPeople = function($http, $interval, industry, Achievement) {
 		//Candy Person base class.
 		//industry = link to industry object for production methods
 		//production = how much one unit will make.
 		//cost = starting cost of one unit.
 		//exponent = cost's exponential growth.
-		var candyPerson = function(imgName, industry, production, cost, id) {
+		var CandyPerson = function(imgName, industry, production, cost, id) {
 			expect(cost).to.be.ok;
 			expect(production).to.be.ok;
 			expect(id).to.be.ok;
@@ -78,29 +78,29 @@
 				for(var item in self.achievements){
 					self.achievements[item].check();
 				}
-			}
+			};
 
 			return self;
 		};
 
 		var people = {
-			taffy: new candyPerson('taffy', industry.taffy, 1, 10, 1),
-			jellyBean: new candyPerson('jellybean', industry.jellyBean, 1, 30, 2),
-			doughNut: new candyPerson('doughnut', industry.doughNut, 1, 200, 3),
-			jawBreaker: new candyPerson('jawbreaker', industry.jawBreaker, 1, 700, 4),
-			peppermint: new candyPerson('peppermint', industry.peppermint, 1, 5000, 5),
-			rockCandy: new candyPerson('rockCandy', industry.rockCandy, 1, 13000, 6)
+			taffy: new CandyPerson('taffy', industry.taffy, 1, 10, 1),
+			jellyBean: new CandyPerson('jellybean', industry.jellyBean, 1, 30, 2),
+			doughNut: new CandyPerson('doughnut', industry.doughNut, 1, 200, 3),
+			jawBreaker: new CandyPerson('jawbreaker', industry.jawBreaker, 1, 700, 4),
+			peppermint: new CandyPerson('peppermint', industry.peppermint, 1, 5000, 5),
+			rockCandy: new CandyPerson('rockCandy', industry.rockCandy, 1, 13000, 6)
 		};
 		
-		people.taffy.achievements.push(new achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"))
-		people.jellyBean.achievements.push(new achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "Create your first Jelly Person!"))
-		people.doughNut.achievements.push(new achievement(people.doughNut, 1, "Hello Donut", "Breath life into donut kind"))
-		people.jawBreaker.achievements.push(new achievement(people.jawBreaker, 1, "Jaw Cracker", "Create first living Jawbreaker"))
-		people.peppermint.achievements.push(new achievement(people.peppermint, 1, "GET PEPPERD", "Manifest Sentient Peppermints"))
-		people.rockCandy.achievements.push(new achievement(people.rockCandy, 1, "Purity", "Refine the purest Rock Candy"))	
-		people.rockCandy.achievements.push(new achievement(people.rockCandy, 2, "Goddamit Jesse", "Make a second Sentient Rock Candy"))
+		people.taffy.achievements.push(new Achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"));
+		people.jellyBean.achievements.push(new Achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "Create your first Jelly Person!"));
+		people.doughNut.achievements.push(new Achievement(people.doughNut, 1, "Hello Donut", "Breath life into donut kind"));
+		people.jawBreaker.achievements.push(new Achievement(people.jawBreaker, 1, "Jaw Cracker", "Create first living Jawbreaker"));
+		people.peppermint.achievements.push(new Achievement(people.peppermint, 1, "GET PEPPERD", "Manifest Sentient Peppermints"));
+		people.rockCandy.achievements.push(new Achievement(people.rockCandy, 1, "Purity", "Refine the purest Rock Candy"));
+		people.rockCandy.achievements.push(new Achievement(people.rockCandy, 2, "Goddamit Jesse", "Make a second Sentient Rock Candy"));
 		//now load stuff.
-		for (name in people) {
+		for (var name in people) {
 			people[name].loadState();
 		}
 
@@ -110,7 +110,7 @@
 		}
 
 
-		self.incrementInterval = $interval(function harvestTaffy() {
+		var incrementInterval = $interval(function harvestTaffy() {
 			for (name in people) {
 				people[name].produce();
 			}
@@ -118,9 +118,9 @@
 
 
 		//expose candyPerson in prototype for unit tests
-		Object.defineProperty(people, 'candyPerson', {
+		Object.defineProperty(people, 'CandyPerson', {
 		  enumerable: false,
-		  value: candyPerson
+		  value: CandyPerson
 		});
 
 
