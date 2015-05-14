@@ -36,6 +36,12 @@ marcApp.config(function($routeProvider) {
     }
 );
 
+marcApp.run(function() {
+    if(FastClick){
+        FastClick.attach(document.body);
+    }
+});
+
 
 //Sidebar controller to change tab highlight
 marcApp.controller('SideBar', function($scope, $location) {
