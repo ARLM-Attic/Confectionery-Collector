@@ -126,7 +126,11 @@
 
 .progress {
   margin: 0px;
-  border-radius: 0px
+  border: 1px solid  #ccc;
+  background-color: #FDFDFD;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; 
 }
 .progress-bar{
   transition: width .1s ease;
