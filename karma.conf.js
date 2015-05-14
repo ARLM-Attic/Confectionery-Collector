@@ -12,6 +12,7 @@ module.exports = function(config){
       'app/javascript/vendor/jquery.min.js',
       'app/javascript/vendor/toastr.js',
       'app/javascript/vendor/Chart.js',
+      'app/javascript/vendor/fastclick.js',
       'app/javascript/vendor/angular-chart.js',
       'app/app.js',
       'app/javascript/service/*.js',
