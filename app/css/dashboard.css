@@ -176,6 +176,10 @@ h1{
 .active {
   box-shadow: 1px 1px 3px #428bca;
 }
+.upgrade-title{
+    margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 .achievement-thumb{
   background-color: #959595;

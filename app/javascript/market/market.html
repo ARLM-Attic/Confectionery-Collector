@@ -1,19 +1,10 @@
 <!-- Market.html -->
 <div  class="page-header" style="margin-top: -15px;"> 
-	<h1 >Sugar Market </h1>
-	Sell candy for sugar in order to buy different types of candy
-</div>
-<div class="base">
-	<h3> sugar: {{sugar.getCount() | number : 0}}mg</h3>
-	<div class="btn-group bottom" role="group" aria-label="...">
-	  <button type="button" class="btn btn-default" ng-class="{active: isActive(1)}" ng-click="setMultiplier(1)">1x</button>
-	  <button type="button" class="btn btn-default" ng-class="{active: isActive(10)}" ng-click="setMultiplier(10)">10x</button>
-	  <button type="button" class="btn btn-default" ng-class="{active: isActive(100)}" ng-click="setMultiplier(100)">100x</button>
-	  <button type="button" class="btn btn-default" ng-class="{active: isActive(0)}" ng-click="setMultiplier(0)">max</button>
-	</div>
+	<h1 >Upgrade Market </h1>
+	Description of modest lenght about upgrades
 </div>
 
-<div class="row tight"> 
+<div class="row tight" style="display:none;"> 
 	<div class="col-md-6" ng-repeat="item in industry"> 
 		<div class="row mellow well well-sm">
 			<div style="width: 20%; float: left">
@@ -51,3 +42,24 @@
 		</div>
 	</div> 
 </div> 
+
+
+
+<button type="button" class="btn btn-default" style="width: 100%;position:relative"> 
+	<div style="overflow: visible"> 
+		<div class="h3 upgrade-title text-left">
+			Taffy Cannon
+		</div>
+		<div style="top: 0;right: 0;position:absolute;padding: 12px 12px;" class="text-right">
+			<div style="overflow: hidden;">
+				<img ng-src="images/taffy-CANDY.png" alt="..." class="img-circle img-responsive" style="padding-left: 4px; height:2em; float: right">
+				<div style="font-size: 1.2em;vertical-align: middle; line-height: 1.7em; float: right">1 million</div>
+			</div>			
+		</div>
+	</div>
+
+	<div style="white-space: normal;"> 
+		Things, description, things, more things. and then the bonus
+	</div>
+</button> 
+
