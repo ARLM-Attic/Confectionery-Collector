@@ -62,9 +62,9 @@
                     <div style="padding: 5px"> 
                         <h2 class="text-center" style="margin-top:0; margin-bottom: 6px;"> {{worker.industry.getCount()| number : 0}} </h2>
                         
-                            <button style="width: 100%" type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()">
-                                Cost: {{worker.getCost()| number: 0}}
-                            </button> 
+                        <button style="width: 100%" type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()">
+                            Cost: {{worker.getCost()| number: 0}}
+                        </button> 
                         
                         <div class="progress" class="">
                           <div ng-class="{'progress-bar-warning': worker.getCostProgress() < 99, 'progress-bar-success': worker.getCostProgress() == 100}" class="progress-bar" role="progressbar" aria-valuenow="{{worker.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': worker.getCostProgress() + '%'}">
