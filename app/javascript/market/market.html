@@ -5,7 +5,7 @@
 </div>
 <div class="base">
 	<h3> sugar: {{sugar.getCount() | number : 0}}mg</h3>
-	<div class="btn-group bottom" role="group" aria-label="...">
+	<div class="btn-group bottom buyMultiplier" role="group" aria-label="...">
 	  <button type="button" class="btn btn-default" ng-class="{active: isActive(1)}" ng-click="setMultiplier(1)">1x</button>
 	  <button type="button" class="btn btn-default" ng-class="{active: isActive(10)}" ng-click="setMultiplier(10)">10x</button>
 	  <button type="button" class="btn btn-default" ng-class="{active: isActive(100)}" ng-click="setMultiplier(100)">100x</button>
@@ -31,19 +31,19 @@
 				</div>
 
 				<div style="width: 100%;">
-					<div class ="col-md-6 col-sm-6 col-xs-6"> 
-						<button type="button" ng-show="buyMultiplier" class="btn btn-default" ng-click="item.buy(buyMultiplier)">
+					<div class ="col-md-6 col-sm-6 col-xs-6 sell-price"> 
+						<button type="button" ng-show="buyMultiplier" class="btn btn-default btn-sm small-text" ng-click="item.buy(buyMultiplier)">
 							Buy {{item.getBuy * buyMultiplier | number : 0}}mg
 						</button>
 
-						<button type="button" ng-hide="buyMultiplier" class="btn btn-default" ng-click="item.buy(getMaxBuy(item))">
+						<button type="button" ng-hide="buyMultiplier" class="btn btn-default btn-sm small-text" ng-click="item.buy(getMaxBuy(item))">
 							Buy {{getMaxBuy(item)| number : 0}}x
 						</button>
 					</div>
 					<div class ="col-md-6 col-sm-6 col-xs-6" style="padding-right: 0"> 
 						<div class="pull-right" >
-							<span>{{item.getSell | number: 0}}mg </span>
-							<button type="button" ng-click="item.sell()" class="btn btn-default">Sell</button>
+							<span class="small-text">{{item.getSell | number: 0}}mg </span>
+							<button type="button" ng-click="item.sell()" class="btn btn-default btn-sm small-text">Sell</button>
 						</div>
 					</div>
 				</div>

@@ -74,10 +74,18 @@
 .main {
   padding: 20px;
 }
+@media (max-width: 320px) {
+  .bottom.buyMultiplier{
+    position: static;
+  }
+  .small-text{
+    font-size:11px;
+  }
+}
 @media (max-width: 768px) {
   .market-field{
     margin-top: .2em
-  }
+  }  
 
   button.btn-cost {
     border-top-left-radius: 4px;
