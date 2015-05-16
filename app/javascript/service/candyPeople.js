@@ -86,11 +86,11 @@
 
 		var people = {
 			taffy: new CandyPerson('taffy', industry.taffy, 1, 10, 1),
-			jellyBean: new CandyPerson('jellybean', industry.jellyBean, 1, 30, 2),
-			doughNut: new CandyPerson('doughnut', industry.doughNut, 1, 200, 3),
-			jawBreaker: new CandyPerson('jawbreaker', industry.jawBreaker, 1, 700, 4),
-			peppermint: new CandyPerson('peppermint', industry.peppermint, 1, 5000, 5),
-			rockCandy: new CandyPerson('rockCandy', industry.rockCandy, 1, 13000, 6)
+			jellyBean: new CandyPerson('jellybean', industry.jellyBean, 1, 10, 2),
+			doughNut: new CandyPerson('doughnut', industry.doughNut, 1, 10, 3),
+			jawBreaker: new CandyPerson('jawbreaker', industry.jawBreaker, 1, 10, 4),
+			peppermint: new CandyPerson('peppermint', industry.peppermint, 1, 10, 5),
+			rockCandy: new CandyPerson('rockCandy', industry.rockCandy, 1, 10, 6)
 		};
 		
 		people.taffy.achievements.push(new Achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"));
