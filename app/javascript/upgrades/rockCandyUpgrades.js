@@ -29,6 +29,98 @@
 		));
 		***********************************
 		***********************************/
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 25000,//numerical cost
+				title: "RockCandy!",//wity title
+				description: "Buy your first RockCandy!",//text that refferences pop culture
+				effectedItem: candyPeople.rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 33,//how far down the list should this be? 
+				type: "seed"
+			}
+		));	
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 100,//numerical cost
+				title: "Sticks!",//wity title
+				description: "New stick technology for holding your RockCandy. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 34,//how far down the list should this be?  
+			}
+		));			
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 500,//numerical cost
+				title: "Granite",//wity title
+				description: "Rockin new candy flavor. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 35,//how far down the list should this be?  
+			}
+		));		
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 1000,//numerical cost
+				title: "New Processing",//wity title
+				description: "Same great taste, new blue color. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 36,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.taffy,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Chewy Rocks",//wity title
+				description: "The chewyest! +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 42,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.jellyBean,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Mystery Rocks",//wity title
+				description: "Mystery flavored. Totaly not sugar. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 43,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.doughNut,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Baked rocks",//wity title
+				description: "New magma flavor! +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 44,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.jawBreaker,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Rock layers",//wity title
+				description: "A geologists faverite! +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 45,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Minty rocks",//wity title
+				description: "Most original upgrade name +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 46,//how far down the list should this be?  
+			}
+		))
+		
 
 
 		return self;

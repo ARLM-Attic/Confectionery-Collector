@@ -43,7 +43,7 @@
 	</div> 
 </div> 
 
-<div  ng-repeat="item in upgrades">
+<div  ng-repeat="item in upgrades | orderBy: 'id'">
 	<button ng-click="item.buy()" ng-hide="item.unlocked" type="button" class="btn btn-default" style="width: 100%;position:relative; margin-bottom: .5em"> 
 		<div style="overflow: visible"> 
 			<div class="h3 upgrade-title text-left">
