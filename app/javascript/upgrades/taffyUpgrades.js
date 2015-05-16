@@ -9,6 +9,7 @@
 		var doughNut = industry.doughNut;
 		var peppermint = industry.peppermint;
 		var jawBreaker = industry.jawBreaker;
+		var rockCandy = industry.rockCandy;
 		var self = []
 		
 		//Uuuupgrade template; verbose cause i'm gonna forget
@@ -343,18 +344,232 @@
 				cost: 15000,//numerical cost
 				title: "Minty Layer",//wity title
 				description: "One sweet layer of PepperMint +100% JawBreaker production",//text that refferences pop culture
-				effectedItem: doughNut,//what industry does this actually upgrade?
+				effectedItem: jawBreaker,//what industry does this actually upgrade?
 				upgrade: 0.02,//upgrade by how much math? 
 				id: 31,//how far down the list should this be?  
 			}
 		));		
-
-
-
-
-
-
-
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 20000,//numerical cost
+				title: "WinterMint",//wity title
+				description: "Only available 3 months out of the year. +100% PepperMint production",//text that refferences pop culture
+				effectedItem: peppermint,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 32,//how far down the list should this be?  
+			}
+		));	
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 25000,//numerical cost
+				title: "RockCandy!",//wity title
+				description: "Buy your first RockCandy!",//text that refferences pop culture
+				effectedItem: candyPeople.rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 33,//how far down the list should this be? 
+				type: "seed"
+			}
+		));	
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 100,//numerical cost
+				title: "Sticks!",//wity title
+				description: "New stick technology for holding your RockCandy. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 34,//how far down the list should this be?  
+			}
+		));			
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 500,//numerical cost
+				title: "Granite",//wity title
+				description: "Rockin new candy flavor. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 35,//how far down the list should this be?  
+			}
+		));		
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 1000,//numerical cost
+				title: "New Processing",//wity title
+				description: "Same great taste, new blue color. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 36,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 2000,//numerical cost
+				title: "Crunchy Taffy",//wity title
+				description: "Little bite sized rock candy pieces. +100% Taffy production",//text that refferences pop culture
+				effectedItem: taffy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 37,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 3000,//numerical cost
+				title: "Jelly Clusters",//wity title
+				description: "Jellybeans clustered on a stick! +100% JellyBean production",//text that refferences pop culture
+				effectedItem: jellyBean,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 38,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 5000,//numerical cost
+				title: "BearClaws",//wity title
+				description: "The most grizzly of the doughnuts. +100% Doughnut production",//text that refferences pop culture
+				effectedItem: doughNut,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 39,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 10000,//numerical cost
+				title: "Jawbreaker ona Stick",//wity title
+				description: "Does this really need an explanation? +100% Jawbreaker production",//text that refferences pop culture
+				effectedItem: jawBreaker,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 40,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.rockCandy,//industry to use in cost 
+				cost: 15000,//numerical cost
+				title: "Jelly Clusters",//wity title
+				description: "Jellybeans clustered on a stick! +100% peppermint production",//text that refferences pop culture
+				effectedItem: peppermint,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 41,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.taffy,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Chewy Rocks",//wity title
+				description: "The chewyest! +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 42,//how far down the list should this be?  
+			}
+		));
+		self.push(new upgrade({
+				industry: industry.jellyBean,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Mystery Rocks",//wity title
+				description: "Mystery flavored. Totaly not sugar. +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 43,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.doughNut,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Baked rocks",//wity title
+				description: "New magma flavor! +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 44,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.jawBreaker,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Rock layers",//wity title
+				description: "A geologists faverite! +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 45,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Minty rocks",//wity title
+				description: "Most original upgrade name +100% RockCandy production",//text that refferences pop culture
+				effectedItem: rockCandy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 46,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Taffy Offering",//wity title
+				description: "Increase taffy production by paying a certain buttler in peppermints to grant us favor",//text that refferences pop culture
+				effectedItem: taffy,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 47,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Absinthe Jellybeans",//wity title
+				description: "Same taste, different kick.",//text that refferences pop culture
+				effectedItem: jellyBean,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 48,//how far down the list should this be?  
+			}
+		))				
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Jaw Breaker Gaurdians",//wity title
+				description: "Protect the kingdom with these giant constructs",//text that refferences pop culture
+				effectedItem: jawBreaker,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 49,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Steel Jaws",//wity title
+				description: "Increase the efficiency of taste testing batch. +20%",//text that refferences pop culture
+				effectedItem: jawBreaker,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 50,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Star mints",//wity title
+				description: "Introduce sweet flavors to accompany the bite of the mint.",//text that refferences pop culture
+				effectedItem: peppermint,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 51,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Edible Wrappers",//wity title
+				description: "Peppermint with edible wrappers are much easier to eat.",//text that refferences pop culture
+				effectedItem: peppermint,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 52,//how far down the list should this be?  
+			}
+		))
+		self.push(new upgrade({
+				industry: industry.peppermint,//industry to use in cost 
+				cost: 300000,//numerical cost
+				title: "Snake oil mints",//wity title
+				description: "Most original upgrade name +100% RockCandy production",//text that refferences pop culture
+				effectedItem: peppermint,//what industry does this actually upgrade?
+				upgrade: 0.02,//upgrade by how much math? 
+				id: 53,//how far down the list should this be?  
+			}
+		))
 
 
 
