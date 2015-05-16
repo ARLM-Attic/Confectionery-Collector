@@ -45,7 +45,8 @@
     <div data-toggle="tooltip" title="{{worker.industry.getCount() == 0 ?'Buy '+ worker.industry.name + ' Candy from the market in order to build': ''}}" > 
         <button type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()" style="width: 100%;">Cost: {{worker.getCost()| number: 0}}</button>
     </div> 
-    <div><span class="field">Population:</span> {{worker.getCount()| number}} </div>
+    <div><span class="field">Population:</span>  {{worker.getCount()| number}} </div>
+    
  </div>
 </div>
 
@@ -64,11 +65,13 @@
                         
                         <button style="width: 100%" type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()">
                             Cost: {{worker.getCost()| number: 0}}
+                            
                         </button> 
                         
                         <div class="progress" class="">
                           <div ng-class="{'progress-bar-warning': worker.getCostProgress() < 99, 'progress-bar-success': worker.getCostProgress() == 100}" class="progress-bar" role="progressbar" aria-valuenow="{{worker.getCostProgress()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': worker.getCostProgress() + '%'}">
                             <span class="sr-only">{{worker.getCostProgress()}}% Complete (warning)</span>
+
                           </div>
                         </div>
                         

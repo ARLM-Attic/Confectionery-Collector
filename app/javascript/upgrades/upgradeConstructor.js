@@ -25,7 +25,8 @@
 			self.id = data.id || 0;
 			self.title = data.title || 'missingno';
 			self.description = data.description || '???';
-			self.industry = data.industry
+			self.industry = data.industry;
+			self.effectedItem = data.effectedItem;
 			self.upgrade = data.upgrade;
 			self.cost = data.cost
 			self.unlocked = false;
@@ -45,21 +46,23 @@
 				}
 				return progress * 100;
 			};
+
 			self.buy = function(){
-				if (industry.getCount() >= data.cost) {
+				if (self.industry.getCount() >= data.cost) {
 					self.unlocked = true;
-					industry.useItem(data.cost);
+					self.industry.useItem(data.cost);
+					self.effectedItem.upgrade(self.upgrade);
 					self.saveState();
 				}
 			}
 
 			self.saveState = function() {
-				window.localStorage.setItem('UPGR-' + id + '-' + title, self.unlocked);
+				window.localStorage.setItem('UPGR-' + self.id + '-' + self.title, self.unlocked);
 			};
 
 			self.loadState = function() {
 
-				var state = Number(window.localStorage.getItem('UPGR-' + id + '-' + title));
+				var state = Number(window.localStorage.getItem('UPGR-' + self.id + '-' + self.title));
 				if (state) {
 					self.unlocked = state;
 				}

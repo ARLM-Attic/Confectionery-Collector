@@ -32,7 +32,7 @@
 				title: "Red Taffy",//wity title
 				description: "Inject the color red into taffy. +100% taffy production",//text that refferences pop culture
 				effectedItem: taffy,//what industry does this actually upgrade?
-				upgrade: 2,//upgrade by how much math? 
+				upgrade: 0.1,//upgrade by how much math? 
 				id: 1,//how far down the list should this be? 
 			}
 		));
@@ -47,7 +47,6 @@
 				id: 2,//how far down the list should this be? 
 			}
 		));
-
 		return self;
 	};
 

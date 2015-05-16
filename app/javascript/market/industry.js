@@ -7,6 +7,7 @@
 			var count = 0;
 			var efficiency = 0.1;
 			var self = {};
+			self.efficiency = function(){return efficiency;}
 			self.name = name;
 			self.imgfullsrc = name ? 'images/' + name + '-CANDY.png' : 'images/missingno.png';
 			self.getSell = sell;
@@ -33,8 +34,13 @@
 					sugar.useItem(buy * amount);
 					self.saveState();
 				}
+
 				self.checkYourSelf()
 			};
+
+			self.upgrade = function(amount){
+				efficiency += amount;
+			}
 
 			self.sell = function() {
 				if (count >= 1) {
@@ -68,6 +74,7 @@
 					self.achievements[item].check();
 				}
 			}
+
 
 			return self;
 		};
