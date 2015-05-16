@@ -44,7 +44,7 @@ marcApp.run(function() {
 
 
 //Sidebar controller to change tab highlight
-marcApp.controller('SideBar', function($scope, $location) {
+marcApp.controller('SideBar', function($scope, $location, upgrades) {
     $scope.isActive = function(route) {
         $scope.path = $location.path();
         return $location.path() === route;
@@ -52,7 +52,7 @@ marcApp.controller('SideBar', function($scope, $location) {
 });
 
 
-marcApp.controller('MainController', ['$scope', 'candyPeople', 'industry', 'stats', function($scope, candyPeople, industry, stats) {
+marcApp.controller('MainController', ['$scope', 'candyPeople', 'industry', 'stats', 'upgrades', function($scope, candyPeople, industry, stats, upgrades) {
 
     console.log('hodor');
 

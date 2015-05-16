@@ -51,6 +51,7 @@
 
 			self.seed = function() {
 				population = 1;
+				self.saveState();
 			};
 
 			self.saveState = function() {

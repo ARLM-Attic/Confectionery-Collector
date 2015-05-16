@@ -69,11 +69,15 @@
 
 			self.loadState = function() {
 
-				var state = Number(window.localStorage.getItem('UPGR-' + self.id + '-' + self.title));
+				var state = window.localStorage.getItem('UPGR-' + self.id + '-' + self.title);
 				if (state) {
 					self.unlocked = state;
+					if(self.type === "upgrade"){
+						self.effectedItem.upgrade(self.upgrade);
+					}
 				}
 			};
+			self.loadState();
 
 			return self;
 		};

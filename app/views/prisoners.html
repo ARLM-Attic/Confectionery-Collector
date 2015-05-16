@@ -57,6 +57,7 @@
                 <div style="width: 30%; float: left; position:relative">
                     <div class="text-center" style="position: absolute; width: 100%">{{worker.industry.name}}</div> 
                     <div class="text-center" style="position: absolute; width: 100%; bottom: 0; text-shadow: 1px 1px rgba(171, 171, 171, 0.36);"> {{worker.getCount()| number}}</div>
+                    <div class="text-center ng-hide" style="position: absolute; width: 100%; bottom: -19px; text-shadow: 1px 1px rgba(171, 171, 171, 0.36);"> {{worker.industry.efficiency()| number}}</div>
                     <img ng-src="images/{{worker.imgName}}.png" src="images/taffy.png" class="img-thumbnail" style="width: 100%;"> 
                     
                 </div> 
