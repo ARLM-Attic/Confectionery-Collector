@@ -10,14 +10,14 @@ angular.module('marcApp.market', ['ngRoute'])
 }])
 
 // create the controller and inject Angular's $scope
-.controller('MarketCtrl', ["$scope", "candyPeople", "industry", function($scope, candyPeople, industry) {
+.controller('MarketCtrl', ["$scope", "candyPeople", "industry", "upgrades", function($scope, candyPeople, industry, upgrades) {
 
     //angular needs an array
     var output = [];
     for(var i in industry){
         output.push(industry[i]);
     }
-    
+    $scope.upgrades = upgrades;
 
     //pull sugar out because it's the currency of the market
     $scope.sugar = output.shift();

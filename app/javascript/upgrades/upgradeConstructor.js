@@ -2,19 +2,32 @@
 
 //write code to manage prisoners
 (function() {
-	var Upgrades = function($http, $interval) {
-		var Upgrade = function(industry, cost, title, description, effectedItem, upgrade, id) {
-			expect(cost).to.be.ok;
-			expect(production).to.be.ok;
-			expect(id).to.be.ok;
+	var Upgrades = function() {
+		/*
+		data = {
+			industry: industry to use in cost 
+			cost: numerical cost
+			title: wity title
+			description: text that refferences pop culture
+			effectedItem: what industry does this actually upgrade?
+			upgrade: upgrade by how much math? 
+			id: how far down the list should this be? 
+		}
+		*/
+
+		var Upgrade = function(data) {
+			expect(data).to.be.ok;
+			expect(data.title).to.be.ok;
+			expect(data.id).to.be.ok;
 
 			//expose arguments
 			var self = {};
-			self.id = id || 0;
-			self.title = title || 'missingno';
-			self.description = description || '???';
-			self.industry = industry
-			self.upgrade = production;
+			self.id = data.id || 0;
+			self.title = data.title || 'missingno';
+			self.description = data.description || '???';
+			self.industry = data.industry
+			self.upgrade = data.upgrade;
+			self.cost = data.cost
 			self.unlocked = false;
 
 			self.getCount = function() {
@@ -22,7 +35,7 @@
 			};
 
 			self.getCost = function() {
-				return cost;
+				return data.cost;
 			};
 
 			self.getCostProgress = function() {
@@ -33,9 +46,9 @@
 				return progress * 100;
 			};
 			self.buy = function(){
-				if (industry.getCount() >= cost) {
+				if (industry.getCount() >= data.cost) {
 					self.unlocked = true;
-					industry.useItem(cost);
+					industry.useItem(data.cost);
 					self.saveState();
 				}
 			}
@@ -60,5 +73,5 @@
 
 
 	var module = angular.module('marcApp');
-	module.factory('Upgrades', Upgrades);
+	module.factory('UpgradeConstructor', Upgrades);
 }());
