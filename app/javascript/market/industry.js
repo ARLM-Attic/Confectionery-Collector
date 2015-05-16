@@ -7,7 +7,7 @@
 			var count = 0;
 			var efficiency = 0.1;
 			var self = {};
-			self.efficiency = function(){return efficiency;}
+		
 			self.name = name;
 			self.imgfullsrc = name ? 'images/' + name + '-CANDY.png' : 'images/missingno.png';
 			self.getSell = sell;
@@ -37,6 +37,9 @@
 
 				self.checkYourSelf()
 			};
+			
+			//for debugging
+			self.efficiency = function(){return efficiency;}
 
 			self.upgrade = function(amount){
 				efficiency += amount;

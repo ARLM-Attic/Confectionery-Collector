@@ -25,6 +25,7 @@
 			self.id = data.id || 0;
 			self.title = data.title || 'missingno';
 			self.description = data.description || '???';
+			self.type = data.type || "upgrade";
 			self.industry = data.industry;
 			self.effectedItem = data.effectedItem;
 			self.upgrade = data.upgrade;
@@ -43,15 +44,21 @@
 				var progress = item.getCount() / self.getCost();
 				if (progress > 1) {
 					return 100;
-				}
+				};
 				return progress * 100;
 			};
 
 			self.buy = function(){
-				if (self.industry.getCount() >= data.cost) {
+				if (!self.unlocked && self.industry.getCount() >= data.cost) {
 					self.unlocked = true;
 					self.industry.useItem(data.cost);
-					self.effectedItem.upgrade(self.upgrade);
+					if(self.type === "upgrade"){
+						self.effectedItem.upgrade(self.upgrade);
+					} else if( self.type === "seed"){
+						self.effectedItem.seed();
+					} else {
+						console.log("UPGRADE DID NOT DO SHIT BRO.")
+					}
 					self.saveState();
 				}
 			}

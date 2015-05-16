@@ -44,7 +44,7 @@
 </div> 
 
 <div  ng-repeat="item in upgrades">
-	<button ng-click="item.buy()" type="button" class="btn btn-default" style="width: 100%;position:relative; margin-bottom: .5em"> 
+	<button ng-click="item.buy()" ng-hide="item.unlocked" type="button" class="btn btn-default" style="width: 100%;position:relative; margin-bottom: .5em"> 
 		<div style="overflow: visible"> 
 			<div class="h3 upgrade-title text-left">
 				{{item.title}}

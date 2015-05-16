@@ -2,7 +2,7 @@
 
 //write code to manage prisoners
 (function() {
-	var taffyUpgrades = function(UpgradeConstructor, industry) {
+	var taffyUpgrades = function(UpgradeConstructor, industry, candyPeople) {
 		var upgrade = UpgradeConstructor;
 		var taffy = industry.taffy;
 		var self = []
@@ -27,7 +27,7 @@
 		***********************************/
 
 		self.push(new upgrade({
-				industry: industry.jellyBean,//industry to use in cost 
+				industry: industry.taffy,//industry to use in cost 
 				cost: 100,//numerical cost
 				title: "Red Taffy",//wity title
 				description: "Inject the color red into taffy. +100% taffy production",//text that refferences pop culture
@@ -38,15 +38,54 @@
 		));
 
 		self.push(new upgrade({
-				industry: industry.doughNut,//industry to use in cost 
-				cost: 300,//numerical cost
-				title: "Pastry incentives",//wity title
-				description: "Get workers to work harder for the chance to win a donut party +20% taffy production",//text that refferences pop culture
-				effectedItem: taffy,//what industry does this actually upgrade?
-				upgrade: 1.2,//upgrade by how much math? 
-				id: 2,//how far down the list should this be? 
+				industry: industry.taffy,//industry to use in cost 
+				cost: 30,//numerical cost
+				title: "Jelly Beans",//wity title
+				description: "Buy your first jelly bean",//text that refferences pop culture
+				effectedItem: candyPeople.jellyBean,//what industry does this actually upgrade?
+				upgrade: 0.1,//upgrade by how much math? 
+				id: 1,//how far down the list should this be? 
+				type: "seed"
 			}
 		));
+
+		self.push(new upgrade({
+				industry: industry.taffy,//industry to use in cost 
+				cost: 2000,//numerical cost
+				title: "Pink Taffy",//wity title
+				description: "The most feminine of the taffy world. +100% taffy production",//text that refferences pop culture
+				effectedItem: taffy,//what industry does this actually upgrade?
+				upgrade: 0.1,//upgrade by how much math? 
+				id: 5,//how far down the list should this be? 
+			}
+		));
+
+		self.push(new upgrade({
+				industry: industry.jellyBean,//industry to use in cost 
+				cost: 100,//numerical cost
+				title: "Wax Paper",//wity title
+				description: "Wax paper made of ground up jelly beans. +100% taff production",//text that refferences pop culture
+				effectedItem: taffy,//what industry does this actually upgrade?
+				upgrade: 0.1,//upgrade by how much math? 
+				id: 6,//how far down the list should this be? 
+			}
+		));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		return self;
 	};
 
