@@ -17,6 +17,7 @@ module.exports = function(config){
       'app/app.js',
       'app/javascript/service/*.js',
       'app/javascript/market/*.js',
+      'app/javascript/upgrades/*.js',
       'app/javascript/achievements/*.js'
     ],
 
