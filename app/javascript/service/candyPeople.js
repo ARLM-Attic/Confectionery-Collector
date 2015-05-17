@@ -92,12 +92,12 @@
 			peppermint: new CandyPerson('peppermint', industry.peppermint, 1, 10, 5),
 			rockCandy: new CandyPerson('rockCandy', industry.rockCandy, 1, 10, 6)
 		};
-		
+		//(item, amount, title, description)
 		people.taffy.achievements.push(new Achievement(people.taffy, 2, "Humble Beginnings", "Make your first Taffy person"));
-		people.jellyBean.achievements.push(new Achievement(people.jellyBean, 1,"HO SHIT DAT JELLY", "Create your first Jelly Person!"));
+		people.jellyBean.achievements.push(new Achievement(people.jellyBean, 1,"Jelly Time", "Create your first Jelly Person!"));
 		people.doughNut.achievements.push(new Achievement(people.doughNut, 1, "Hello Donut", "Breath life into donut kind"));
 		people.jawBreaker.achievements.push(new Achievement(people.jawBreaker, 1, "Jaw Cracker", "Create first living Jawbreaker"));
-		people.peppermint.achievements.push(new Achievement(people.peppermint, 1, "GET PEPPERD", "Manifest Sentient Peppermints"));
+		people.peppermint.achievements.push(new Achievement(people.peppermint, 1, "Super Fresh", "Manifest Sentient Peppermints"));
 		people.rockCandy.achievements.push(new Achievement(people.rockCandy, 1, "Purity", "Refine the purest Rock Candy"));
 		people.rockCandy.achievements.push(new Achievement(people.rockCandy, 2, "Goddamit Jesse", "Make a second Sentient Rock Candy"));
 		//now load stuff.

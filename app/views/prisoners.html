@@ -63,7 +63,7 @@
                 </div> 
                 <div style="width: 70%; float: left">
                     <div style="padding: 5px"> 
-                        <h2 class="text-center" style="margin-top:0; margin-bottom: 6px;"> {{worker.industry.getCount()| number : 0}} </h2>
+                        <h2 class="text-center item-count" style="margin-top:0; margin-bottom: 6px;"> {{worker.industry.getCount()| number : 0}} </h2>
                         
                         <button style="width: 100%" type="button" class="btn btn-default btn-cost" ng-class="{disabled: worker.industry.getCount() == 0}" ng-click="worker.mkTaffyPerson()">
                             Cost: {{worker.getCost()| number: 0}}

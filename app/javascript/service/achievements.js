@@ -22,8 +22,22 @@
 			};
 
 			self.check = function() {
-				if (!self.unlocked && self.item.getCount() >= self.amountNeeded) {
-					self.win();
+				if(self.item instanceof Array){
+					var upgradeCount = 0;
+					for(var upgrade in self.item){
+						if(self.item[upgrade].unlocked){
+							upgradeCount + 1
+						}
+					}
+
+					if (!self.unlocked && upgradeCount >= self.amountNeeded) {
+						self.win();
+					}
+
+				} else {
+					if (!self.unlocked && self.item.getCount() >= self.amountNeeded) {
+						self.win();
+					}
 				}
 			};
 			return self;

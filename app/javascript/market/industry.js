@@ -37,7 +37,7 @@
 
 				self.checkYourSelf()
 			};
-			
+
 			//for debugging
 			self.efficiency = function(){return efficiency;}
 
@@ -83,8 +83,8 @@
 		};
 
 		var sugar = new comodity('Sugar', 0, 0);
-		sugar.achievements.push(new Achievement(sugar, 1, "First Grains", "Earn your first sugar from the market"))
-		sugar.achievements.push(new Achievement(sugar, 100, "Starting the Sugar", "Get 100 sugar from the market"))
+		//sugar.achievements.push(new Achievement(sugar, 1, "First Grains", "Earn your first sugar from the market"))
+		//sugar.achievements.push(new Achievement(sugar, 100, "Starting the Sugar", "Get 100 sugar from the market"))
 
 		var comodities = {
 			sugar: sugar,

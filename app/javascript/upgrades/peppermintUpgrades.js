@@ -2,20 +2,20 @@
 
 //write code to manage prisoners
 (function() {
-	var Upgrades = function(UpgradeConstructor, industry, candyPeople) {
-		var upgrade = UpgradeConstructor;
+	var peppermintUpgrades = function(UpgradeConstructor, industry, candyPeople) {
+		var Upgrade = UpgradeConstructor;
 		var taffy = industry.taffy;
 		var jellyBean = industry.jellyBean;
 		var doughNut = industry.doughNut;
 		var peppermint = industry.peppermint;
 		var jawBreaker = industry.jawBreaker;
 		var rockCandy = industry.rockCandy;
-		var self = []
+		var self = [];
 		
 		//Uuuupgrade template; verbose cause i'm gonna forget
 		/**********************************
 
-		self.push(new upgrade(
+		self.push(new Upgrade(
 			data = {
 				industry: ,//industry to use in cost 
 				cost: ,//numerical cost
@@ -29,7 +29,7 @@
 		));
 		***********************************
 		***********************************/
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.jawBreaker,//industry to use in cost 
 				cost: 50000,//numerical cost
 				title: "Jawbreakers!",//wity title
@@ -44,7 +44,7 @@
 
 
 		
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 300,//numerical cost
 				title: "Extra Minty",//wity title
@@ -54,7 +54,7 @@
 				id: 25,//how far down the list should this be?  
 			}
 		));		
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 1000,//numerical cost
 				title: "PepperMint Tootpaste",//wity title
@@ -64,7 +64,7 @@
 				id: 26,//how far down the list should this be?  
 			}
 		));	
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 2000,//numerical cost
 				title: "Spearmint",//wity title
@@ -74,7 +74,7 @@
 				id: 27,//how far down the list should this be?  
 			}
 		));
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 20000,//numerical cost
 				title: "WinterMint",//wity title
@@ -84,7 +84,7 @@
 				id: 32,//how far down the list should this be?  
 			}
 		));
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.rockCandy,//industry to use in cost 
 				cost: 15000,//numerical cost
 				title: "Jelly Clusters",//wity title
@@ -94,7 +94,7 @@
 				id: 41,//how far down the list should this be?  
 			}
 		));
-		self.push(new upgrade({
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 300000,//numerical cost
 				title: "Star mints",//wity title
@@ -103,8 +103,8 @@
 				upgrade: 0.02,//upgrade by how much math? 
 				id: 51,//how far down the list should this be?  
 			}
-		))
-		self.push(new upgrade({
+		));
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 300000,//numerical cost
 				title: "Edible Wrappers",//wity title
@@ -113,8 +113,8 @@
 				upgrade: 0.02,//upgrade by how much math? 
 				id: 52,//how far down the list should this be?  
 			}
-		))
-		self.push(new upgrade({
+		));
+		self.push(new Upgrade({
 				industry: industry.peppermint,//industry to use in cost 
 				cost: 300000,//numerical cost
 				title: "Snake oil mints",//wity title
@@ -123,12 +123,12 @@
 				upgrade: 0.02,//upgrade by how much math? 
 				id: 53,//how far down the list should this be?  
 			}
-		))
+		));
 
 
 		return self;
 	};
 
 	var module = angular.module('marcApp');
-	module.factory('peppermint', Upgrades);
+	module.factory('peppermint', peppermintUpgrades);
 }());
