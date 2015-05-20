@@ -2,7 +2,7 @@
 
 //write code to manage prisoners
 (function() {
-	var taffyUpgrades = function(UpgradeConstructor, industry, candyPeople) {
+	var taffyUpgrades = function(UpgradeConstructor, industry, candyPeople, Achievement) {
 		var Upgrade = UpgradeConstructor;
 		var taffy = industry.taffy;
 		var jellyBean = industry.jellyBean;

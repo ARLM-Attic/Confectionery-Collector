@@ -4,15 +4,17 @@
 (function() {
 	var upgrades = function(industry, taffy, doughNut, jawBreaker, jellyBean, peppermint, rockCandy) {
 		//first load all Upgrades from local storage.
-		var self = []
-		//concat all upgrades from taffy
-		self = self.concat(taffy);
-		self = self.concat(doughNut)
-		self = self.concat(jawBreaker)
-		self = self.concat(jellyBean)
-		self = self.concat(peppermint)
-		self = self.concat(rockCandy)
+		var self = {};
+		self.upgrades = [];
+		self.achievements = [];
 
+		//concat all upgrades from taffy
+		self.upgrades = self.upgrades.concat(taffy);
+		self.upgrades = self.upgrades.concat(doughNut)
+		self.upgrades = self.upgrades.concat(jawBreaker)
+		self.upgrades = self.upgrades.concat(jellyBean)
+		self.upgrades = self.upgrades.concat(peppermint)
+		self.upgrades = self.upgrades.concat(rockCandy)
 
 		return self;
 	};

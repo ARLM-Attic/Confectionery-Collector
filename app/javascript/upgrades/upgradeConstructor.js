@@ -60,8 +60,15 @@
 						console.log("UPGRADE DID NOT DO SHIT BRO.")
 					}
 					self.saveState();
+
+					if(self.checkAchievements !== null){
+						self.checkAchievements();
+					}
 				}
 			}
+
+			self.checkAchievements = null;
+
 
 			self.saveState = function() {
 				window.localStorage.setItem('UPGR-' + self.id + '-' + self.title, self.unlocked);

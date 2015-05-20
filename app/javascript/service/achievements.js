@@ -12,13 +12,14 @@
 			self.amountNeeded = amount;
 			self.title = title;
 			self.description = description;
+
 			
 
 			self.win = function() {
 				self.unlocked = true;
 				localStorage.setItem( self.title, self.unlocked);
 				//using a global variable in angular is no good
-				toastr.success(self.title, self.description);
+				toastr.success(self.description, self.title);
 			};
 
 			self.check = function() {

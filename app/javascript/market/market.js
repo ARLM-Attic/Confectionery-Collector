@@ -17,7 +17,7 @@ angular.module('marcApp.market', ['ngRoute'])
     for(var i in industry){
         output.push(industry[i]);
     }
-    $scope.upgrades = upgrades;
+    $scope.upgrades = upgrades.upgrades;
 
     //pull sugar out because it's the currency of the market
     $scope.sugar = output.shift();

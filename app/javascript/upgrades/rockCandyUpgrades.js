@@ -12,6 +12,7 @@
 		var rockCandy = industry.rockCandy;
 		var self = [];
 		
+		
 		//Uuuupgrade template; verbose cause i'm gonna forget
 		/**********************************
 
@@ -27,6 +28,7 @@
 				id: ,//how far down the list should this be? 
 			}
 		));
+		
 		***********************************
 		***********************************/
 		self.push(new Upgrade({

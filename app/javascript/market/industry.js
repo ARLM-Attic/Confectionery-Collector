@@ -106,6 +106,7 @@
 			for (name in comodities) {
 				comodities[name].saveState();
 			}
+			toastr.info("Game Saved");
 		},
 		30000);
 
