@@ -2,6 +2,8 @@
 
 //write code to manage prisoners
 (function() {
+
+
 	var upgrades = function(industry, taffy, doughNut, jawBreaker, jellyBean, peppermint, rockCandy) {
 		//first load all Upgrades from local storage.
 		var self = {};
@@ -21,4 +23,12 @@
 
 	var module = angular.module('marcApp');
 	module.factory('upgrades', upgrades);
+	module.config(['$routeProvider', function($routeProvider) {
+		$routeProvider.when('/Upgrades', {
+		    templateUrl : 'javascript/upgrades/upgrades.html',
+		    controller  : 'MarketCtrl'
+		})
+	}])
+
+
 }());
